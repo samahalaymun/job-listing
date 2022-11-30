@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap");
+
+:root {
+  --Desaturated-Dark-Cyan: hsl(180, 29%, 50%);
+  --Light-Grayish-Cyan: hsl(180, 52%, 96%);
+  --Light-Grayish-Cyan: hsl(180, 31%, 95%);
+  --Dark-Grayish-Cyan: hsl(180, 8%, 52%);
+  --Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
+}
+body {
+  background-color: var(--Light-Grayish-Cyan);
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  background-color: var(--Desaturated-Dark-Cyan);
+  height: 100px;
+  width: 100%;
+  position: relative;
+}
+.header img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.list-wrapper {
+  margin: 70px 0;
+}
+
+.list-item,
+.filter-word {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: rgba(91, 164, 164, 0.25) 0px 13px 27px -5px,
+    rgba(91, 164, 164, 0.3) 0px 8px 16px -8px;
+  display: flex;
+  padding: 25px;
+  justify-content: space-between;
+ 
+}
+.list-item {
+  margin: 15px 100px;
+}
+.filter-word {
+  position: absolute;
+  bottom: -20px;
+  right: 100px;
+  left: 100px;
+}
+.job {
+  display: flex;
+  align-items: center;
+}
+.job-details {
+  margin-left: 20px;
+}
+.job-details .company-name {
+  display: inline-block;
+  margin: 15px 0;
+  color: var(--Desaturated-Dark-Cyan);
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.job-details .new,
+.job-details .featured {
+  text-transform: uppercase;
+  border-radius: 15px;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.job-details .featured {
+  background-color: var(--Very-Dark-Grayish-Cyan);
+  margin-left: 7px;
+}
+.job-details .new {
+  margin-left: 10px;
+  background-color: var(--Desaturated-Dark-Cyan);
+}
+.job-details .job-title {
+  color: var(--Very-Dark-Grayish-Cyan);
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  display: block;
+}
+.job-time span {
+  color: var(--Dark-Grayish-Cyan);
+  font-weight: 500;
+}
+.categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.btn {
+  margin: 0 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: var(--Light-Grayish-Cyan);
+  color: var(--Desaturated-Dark-Cyan);
+  font-weight: 700;
+  border: none;
+  text-transform: capitalize;
+  font-size: 15px;
+}
+.filter-keys {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.filter-keys-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.filter-keys .key {
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: var(--Light-Grayish-Cyan);
+  color: var(--Desaturated-Dark-Cyan);
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 15px;
+}
+.close-btn {
+  background-color: var(--Desaturated-Dark-Cyan);
+  color: white;
+  padding: 2px 10px;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-weight: 700;
+  outline: none;
+  font-size: 25px;
+}
+.close-btn:hover {
+  background-color: var(--Very-Dark-Grayish-Cyan);
+}
+.clear-btn {
+  color: var(--Desaturated-Dark-Cyan);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  font-weight: 700;
+}
+.categories .btn:hover {
+  background-color: var(--Desaturated-Dark-Cyan);
+  color: white;
+}
+
+.hidden {
+  display: none;
+  pointer-events: none;
+  opacity: 0;
+}
+.border-color {
+  border-left: 5px solid var(--Desaturated-Dark-Cyan);
+}
+@media (max-width: 900px) {
+  .list-item {
+    margin: auto 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 50px;
+    
+    padding: 25px 15px;
+    padding-bottom: 10px;
+  }
+  .job {
+    flex-direction: column;
+  }
+  .job-details {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    margin-right: 20px;
+  }
+
+  .categories {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .categories .btn {
+    margin-bottom: 15px;
+  }
+  .company-image {
+    position: absolute;
+    top: -30px;
+    left: 20px;
+  }
+  .company-image img {
+    width: 70%;
+    height: 70%;
+  }
+  .job-details .job-title {
+    margin-bottom: 20px;
+    margin-top: 15px;
+  }
+  .job-time {
+    margin-bottom: 15px;
+  }
+  .filter-word {
+    right: 15px;
+    left: 15px;
+    top: 10px;
+  }
+  .filter-keys-container {
+    justify-content: flex-start;
+    height: auto;
+    overflow: hidden;
+    overflow-y: auto; 
+    
+  }
+  .filter-keys {
+    margin-bottom: 10px;
+  }
+}
